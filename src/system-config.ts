@@ -3,11 +3,21 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
 const packages: any = {
 };
+
+var _materialPackages: string[] = [
+  'core', 'toolbar', 'button', 'card', 'checkbox', 'icon', 'input', 'list', 'progress-bar',
+  'progress-circle', 'radio', 'sidenav'
+];
+
+_materialPackages.forEach((_packageName: string) => {
+  packages['@angular2-material/' + _packageName] = { main: _packageName}
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
